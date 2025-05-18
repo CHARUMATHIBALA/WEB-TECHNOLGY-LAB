@@ -1,0 +1,313 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Cards</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Optional custom styling for extra customization -->
+  <style>
+    body {
+      background-image: url('pro1.png');
+      background-size: cover;
+    }
+    .product-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background-color: #fff;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      max-height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .btn-custom {
+      background-color: #28a745;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #218838;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    /* Custom style for heading */
+    .page-heading {
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Arial', sans-serif;
+      font-size: 3rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Custom Navigation Bar Style */
+    .navbar-custom {
+      background-color: #DE3163;
+    }
+
+    .navbar-custom a {
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar-custom a:hover {
+      color: #ffcc00;
+    }
+
+    /* Badge style for cart count */
+    .badge {
+      position: relative;
+      top: -10px;
+      left: -5px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <!-- Custom Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="FIRST.html">
+              PURE GLOW</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="FIRST.html"><i class="fas fa-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="ABOUT.html"><i class="fas fa-info-circle"></i> About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="cart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span id="cart-count" class="badge bg-danger rounded-circle">0</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Heading -->
+  <div class="page-heading">
+    <h1>MAKEUP</h1>
+  </div>
+
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">MASCARA</h5>
+            <p class="card-text text-muted">$19.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="MASCARA" data-price="19.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="MASCARA" data-price="19.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the product card structure for other products -->
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">EYE LINER</h5>
+            <p class="card-text text-muted">$29.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="EYE LINER" data-price="29.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="EYE LINER" data-price="29.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more product cards similarly -->
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <h5 class="card-title">CONCEALER</h5>
+            <p class="card-text text-muted">$39.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="CONCEALER" data-price="39.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="CONCEALER" data-price="39.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Continue adding product cards for all your products -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="4.jpg" class="card-img-top" alt="Product 4">
+          <div class="card-body">
+            <h5 class="card-title">SERUM </h5>
+            <p class="card-text text-muted">$49.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="SERUM" data-price="49.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="Serum" data-price="49.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="5.jpg" class="card-img-top" alt="Product 5">
+          <div class="card-body">
+            <h5 class="card-title">LIP STICK</h5>
+            <p class="card-text text-muted">$59.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="LIPSTICK" data-price="59.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="Lip stick" data-price="59.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="6.jpg" class="card-img-top" alt="Product 6">
+          <div class="card-body">
+            <h5 class="card-title">EYE LASH</h5>
+            <p class="card-text text-muted">$69.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="EYE LASH" data-price="69.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="Eye lash" data-price="69.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="7.jpg" class="card-img-top" alt="Product 7">
+          <div class="card-body">
+            <h5 class="card-title">EYE LINER</h5>
+            <p class="card-text text-muted">$79.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="EYE LINER" data-price="79.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="Eye liner" data-price="79.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="9.jpg" class="card-img-top" alt="Product 8">
+          <div class="card-body">
+            <h5 class="card-title">CC CREAM</h5>
+            <p class="card-text text-muted">$89.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="CC CREAM" data-price="89.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="CC cream" data-price="89.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+      <!-- ... (Cards 4 to 9) ... -->
+
+      <!-- Example for Card 9 -->
+      <!-- Card 9 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="8.jpg" class="card-img-top" alt="Product 9">
+          <div class="card-body">
+            <h5 class="card-title">GLOSS LIPSTICK</h5>
+            <p class="card-text text-muted">$99.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="GLOSS LIPSTICK" data-price="99.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="GLOSS LIPSTICK" data-price="99.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to handle cart functionality -->
+  <script>
+    // Handle "Buy Now" button clicks
+    document.querySelectorAll('.buy-now').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+      });
+    });
+
+    // Function to add item to cart
+    function addToCart(product, price) {
+      // Retrieve existing cart from localStorage or initialize empty array
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if product already exists in cart
+      const existingProductIndex = cart.findIndex(item => item.product === product);
+      if (existingProductIndex !== -1) {
+        // If product exists, increase quantity
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        // If not, add new product with quantity 1
+        cart.push({ product: product, price: price, quantity: 1 });
+      }
+
+      // Save updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Update cart count on the page
+      updateCartCount();
+
+      // Optional: Display a message to the user
+      alert(`${product} has been added to your cart!`);
+    }
+
+    // Function to update cart count in the navbar
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+      const cartCountElement = document.getElementById('cart-count');
+      if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+      }
+    }
+ 
+    // Handle "Add to Cart" button clicks
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        addToCart(product, price);
+      });
+    });
+
+    // Initialize cart count on page load
+    window.onload = updateCartCount;
+  </script>
+</body>
+</html>

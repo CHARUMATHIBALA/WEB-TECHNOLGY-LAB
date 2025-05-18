@@ -1,0 +1,94 @@
+/* RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #dfffe0, #c5e7f2);
+    color: #333;
+    padding: 30px;
+}
+
+/* FORM CONTAINER */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* TITLES */
+h2 {
+    margin-bottom: 20px;
+    color: teal;
+    text-align: center;
+}
+
+/* TABLE AND INPUT STYLES */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: teal;
+    outline: none;
+}
+
+/* BUTTON STYLES */
+button {
+    padding: 12px 25px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    table,
+    th,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        margin-bottom: 15px;
+    }
+}

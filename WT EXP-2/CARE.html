@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cards</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional custom styling for extra customization -->
+  <style>
+    body {
+      background-image: url('pro1.png');
+    }
+    .product-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      max-height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .btn-custom {
+      background-color: #28a745;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #218838;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    /* Custom style for heading */
+    .page-heading {
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Arial', sans-serif;
+      font-size: 3rem;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    /* Custom Navigation Bar Style */
+    .navbar-custom {
+      background-color: #DE3163; /* Blue background */
+    }
+
+    .navbar-custom a {
+      color: white;
+      font-weight: bold; /* Making navbar items bold */
+    }
+
+    .navbar-custom a:hover {
+      color: #ffcc00; /* Gold color on hover */
+    }
+  </style>
+</head>
+<body class="bg-light">
+    <!-- Custom Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="FIRST.html">
+                PURE GLOW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="FIRST.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ABOUT.html"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Heading -->
+  <div class="page-heading">
+    <h1>CARE</h1>
+  </div>
+
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="z1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">NIVEA</h5>
+            <p class="card-text text-muted">$99.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="NIVEA" data-price="99.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="NIVEA  BODY LOTION" data-price="99.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="z2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">LOTION</h5>
+            <p class="card-text text-muted">$29.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="LOTION" data-price="29.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="LOTION" data-price="29.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="z3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <h5 class="card-title">BODY WASH</h5>
+            <p class="card-text text-muted">$39.99</p>
+            <button class="btn btn-custom add-to-cart" data-product="BODY WASH" data-price="39.99">Add to Cart</button>
+            <a href="checkout.html" class="btn btn-custom buy-now" data-product="BODY WASH" data-price="39.99">BUY NOW!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Handle "Buy Now" button clicks
+    document.querySelectorAll('.buy-now').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+      });
+    });
+
+    // Function to add item to cart
+    function addToCart(product, price) {
+      // Retrieve existing cart from localStorage or initialize empty array
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if product already exists in cart
+      const existingProductIndex = cart.findIndex(item => item.product === product);
+      if (existingProductIndex !== -1) {
+        // If product exists, increase quantity
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        // If not, add new product with quantity 1
+        cart.push({ product: product, price: price, quantity: 1 });
+      }
+
+      // Save updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Update cart count on the page
+      updateCartCount();
+
+      // Optional: Display a message to the user
+      alert(`${product} has been added to your cart!`);
+    }
+
+    // Function to update cart count in the navbar
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+      const cartCountElement = document.getElementById('cart-count');
+      if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+      }
+    }
+
+    // Handle "Add to Cart" button clicks
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        addToCart(product, price);
+      });
+    });
+
+    // Initialize cart count on page load
+    window.onload = updateCartCount;
+  </script>
+</body>
+</html>

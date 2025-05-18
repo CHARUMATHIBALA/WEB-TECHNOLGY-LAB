@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Bill Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f7f7f7;
+    }
+    h2 {
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .item-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #218838;
+    }
+    #total {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>🧾 Interactive Bill Calculator</h2>
+
+  <div id="item-list">
+    <div class="item-row">
+      <input type="text" placeholder="Item Name" class="name">
+      <input type="number" placeholder="Quantity" class="qty" min="0">
+      <input type="number" placeholder="Price per item" class="price" min="0">
+    </div>
+  </div>
+
+  <button class="btn" onclick="addItem()">➕ Add Item</button>
+  <div id="total">Total: ₹0</div>
+</div>
+
+<script>
+  function addItem() {
+    const itemList = document.getElementById('item-list');
+    const newRow = document.createElement('div');
+    newRow.className = 'item-row';
+    newRow.innerHTML = `
+      <input type="text" placeholder="Item Name" class="name">
+      <input type="number" placeholder="Quantity" class="qty" min="0">
+      <input type="number" placeholder="Price per item" class="price" min="0">
+    `;
+    itemList.appendChild(newRow);
+    attachListeners();
+  }
+
+  function calculateTotal() {
+    let total = 0;
+    const rows = document.querySelectorAll('.item-row');
+    rows.forEach(row => {
+      const qty = parseFloat(row.querySelector('.qty').value) || 0;
+      const price = parseFloat(row.querySelector('.price').value) || 0;
+      total += qty * price;
+    });
+    document.getElementById('total').innerText = `Total: ₹${total.toFixed(2)}`;
+  }
+
+  function attachListeners() {
+    const inputs = document.querySelectorAll('.qty, .price');
+    inputs.forEach(input => {
+      input.removeEventListener('input', calculateTotal);
+      input.addEventListener('input', calculateTotal);
+    });
+  }
+
+  // Initial setup
+  attachListeners();
+</script>
+
+</body>
+</html>

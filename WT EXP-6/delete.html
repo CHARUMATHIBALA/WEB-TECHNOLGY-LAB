@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delete User</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Delete User</h2>
+    <input type="text" id="roll_no" placeholder="Enter Roll Number" />
+    <button onclick="deleteUser()">Delete</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    async function deleteUser() {
+      const rollNo = document.getElementById('roll_no').value;
+      const res = await fetch(`http://localhost:5000/delete/${rollNo}`, {
+        method: 'DELETE'
+      });
+      const result = await res.json();
+      document.getElementById('result').innerText = result.message;
+    }
+  </script>
+</body>
+</html>

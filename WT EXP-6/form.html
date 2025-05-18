@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Placement Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Placement Form</h2>
+    <form id="placementForm">
+      <input type="text" name="roll_no" placeholder="Roll Number" required />
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="College Email" required />
+      <input type="email" name="personal_mail" placeholder="Personal Email" />
+      <input type="text" name="temp_address" placeholder="Temporary Address" />
+      <input type="text" name="perm_address" placeholder="Permanent Address" />
+      <input type="text" name="mobile_no" placeholder="Mobile Number" />
+      <input type="text" name="whatsapp_no" placeholder="WhatsApp Number" />
+      <input type="text" name="parent_name" placeholder="Parent Name" />
+      <input type="text" name="parent_mobile" placeholder="Parent Mobile" />
+      <input type="text" name="sslc_mark" placeholder="SSLC Mark" />
+      <input type="text" name="sslc_board" placeholder="SSLC Board" />
+      <input type="text" name="hsc_mark" placeholder="HSC Mark" />
+      <input type="text" name="hsc_board" placeholder="HSC Board" />
+      <input type="text" name="diploma_mark" placeholder="Diploma Mark" />
+      <input type="text" name="sem1_gpa" placeholder="Sem1 GPA" />
+      <input type="text" name="sem1_cgpa" placeholder="Sem1 CGPA" />
+      <input type="text" name="sem2_gpa" placeholder="Sem2 GPA" />
+      <input type="text" name="sem2_cgpa" placeholder="Sem2 CGPA" />
+      <input type="text" name="sem3_gpa" placeholder="Sem3 GPA" />
+      <input type="text" name="sem3_cgpa" placeholder="Sem3 CGPA" />
+      <input type="text" name="history_arrears" placeholder="History of Arrears" />
+      <input type="text" name="standing_arrears" placeholder="Standing Arrears" />
+      <input type="text" name="projects_done" placeholder="Projects Done" />
+      <input type="text" name="github" placeholder="GitHub Link" />
+      <input type="text" name="leetcode_id" placeholder="LeetCode ID" />
+      <input type="text" name="leetcode_dashboard" placeholder="LeetCode Dashboard" />
+      <input type="text" name="leetcode_solved" placeholder="LeetCode Problems Solved" />
+      <input type="text" name="other_platforms_solved" placeholder="Other Platforms Solved" />
+      <input type="text" name="certifications" placeholder="Certifications" />
+      <input type="text" name="internships" placeholder="Internships" />
+      <input type="text" name="languages" placeholder="Programming Languages" />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    document.getElementById('placementForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+      const res = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      document.getElementById('result').innerText = result.message;
+      if (result.success) form.reset();
+    });
+  </script>
+</body>
+</html>

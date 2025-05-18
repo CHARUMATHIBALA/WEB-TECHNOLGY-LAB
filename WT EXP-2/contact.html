@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - PURE GLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #DE3163;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .contact-info div {
+            flex: 1 1 300px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .contact-info div:hover {
+            transform: translateY(-10px);
+        }
+        .contact-info h2 {
+            color: #DE3163;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .contact-info a {
+            color: #DE3163;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-container h2 {
+            color: #DE3163;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-container input:focus, .form-container textarea:focus {
+            border-color: #DE3163;
+            outline: none;
+        }
+        .form-container button {
+            background-color: #DE3163;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #c82850;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .navbar-custom {
+      background-color: #DE3163; /* Blue background */
+    }
+
+    .navbar-custom a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold; /* Making navbar items bold */
+    }
+
+    .navbar-custom a:hover {
+      color: #ffcc00; /* Gold color on hover */
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>We're excited to hear from you!</p>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="FIRST.html">BACK TO HOME</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="contact-info">
+            <div>
+                <h2>Customer Support</h2>
+                <p>If you have any questions or need assistance, please get in touch with us:</p>
+                <p>Email: <a href="mailto:support@beautybrand.com">support@beautybrand.com</a></p>
+                <p>Phone: +1 (800) 123-4567</p>
+                <p>Operating Hours: Monday to Friday, 9 AM to 6 PM (EST)</p>
+            </div>
+            <div>
+                <h2>Visit Us</h2>
+                <p>Our office is located at:</p>
+                <p>123 Beauty Blvd, Suite 456, New York, NY 10001</p>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+                <p>Stay connected with us for new updates and offers:</p>
+                <p><a href="https://instagram.com/beautybrand" target="_blank">Instagram</a> | <a href="https://facebook.com/beautybrand" target="_blank">Facebook</a> | <a href="https://twitter.com/beautybrand" target="_blank">Twitter</a></p>
+            </div>
+        </section>
+
+        <section class="form-container">
+            <h2>Send Us a Message</h2>
+            <form action="thank-you.html" method="GET">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 PURE GLOW. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

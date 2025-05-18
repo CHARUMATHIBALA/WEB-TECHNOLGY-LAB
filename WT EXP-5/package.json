@@ -1,0 +1,17 @@
+{
+    "name": "signup-login",
+    "version": "1.0.0",
+    "description": "MongoDB + Node.js Signup and Login System",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.0",
+        "dotenv": "^16.0.0",
+        "express": "^4.21.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^6.0.12"
+    }
+}

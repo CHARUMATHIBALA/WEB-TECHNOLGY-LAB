@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Logbook Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+
+</head>
+<body style="background-color:rgb(165, 246, 219)">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">STUDENT RECORD</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#studentrecord">Index</a></li>
+        <li><a href="#biodata">Biodata</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Semester
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#SEM1">SEM 1</a></li>
+            <li><a href="#SEM2">SEM 2</a></li>
+            <li><a href="#SEM3">SEM 3</a></li>
+            <li><a href="#SEM4">SEM 4</a></li>
+            <li><a href="#SEM5">SEM 5</a></li>
+            <li><a href="#SEM6">SEM 6</a></li>
+            <li><a href="#SEM7">SEM 7</a></li>
+            <li><a href="#SEM8">SEM 8</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Co-curricular Activities
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#pp">Paper & Project</a></li>
+              <li><a href="#IV">Industrial Visit & Inplant Training</a></li>
+            </ul>
+          </li>
+          <li><a href="#EX">Extracurricular Activities</a></li>
+      </ul>
+      
+    </div>
+  </nav> 
+        
+    <div class="container" id="studentrecord">
+    <h2 class="text-center">KONGU ENGINEERING COLLEGE</h2>
+    <h5 class="text-center">(Autonomous)</h5>
+    <h3 class="text-center">THOPPUPALAYAM(Po),PERUNDURAI(Tk)</h3>
+    <h3 class="text-center">ERODE-638060 TAMILNADU INDIA</h3><br>
+
+    <h1 class="text-center">STUDENT RECORD</h1><br>
+    <center><img src="PIC.jpg" width="100" heigtht="100"></center>
+    <table>
+    <tr>
+        <th>Name:</th>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <th>Reg.no:</th>
+        <td><input type="text" id="reg"></td>
+    </tr>
+    <tr>
+        <th>Programe:</th>
+        <td><input type="text" id="pro"></td>
+    </tr>
+    <tr>
+        <th>Branch:</th>
+        <td><input type="text" id="branch"></td>
+    </tr>
+    <tr>
+        <th>Period Of Study:</th>
+    </tr>
+    <tr>
+        <th>From:</th>
+        <td><input type="number" id="from"></td>
+        <th>To:</th>
+        <td><input type="number" id="to"></td>
+    </tr>
+
+
+
+</table>
+        <button type="submit" value="click" onclick="val()">Submit</button></td>
+
+</div>
+<div class="container" id="biodata">
+    <h2 class="text-center">BIO DATA</h2><br>
+    <table>
+        <tr>
+            <th>1.Name:</th>
+            <td><input type="text" id="bname"></td>
+        </tr>
+        <tr>
+            <th>2.Date of Birth:</th>
+            <td><input type="text" id="dob"></td>
+        </tr>
+        <tr>
+            <th>3.e-mail ID:</th>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <th>4.Community and caste:</th>
+            <td><input type="text" id="cc"></td>
+        </tr>
+        <tr>
+            <th>5.Name of the father/Guardian:</th>
+            <td><input type="text" id="father"></td>
+        </tr>       
+         <tr>
+            <th>6.Permanent Address:</th>
+            <td><textarea  id="address"></textarea></td>
+         </tr>
+        <tr>
+            <th>7.Occupation</th>
+            <td><input type="text" id="occupation"></td>
+        </tr>
+        <tr>
+            <th>8.Annual Income</th>
+            <td><input type="number" id="income"></td>
+        </tr>
+        <tr>
+            <th>9.Native place & District</th>
+            <td><input type="text" id="place"></td>
+        </tr>
+        <tr>
+            <th>10.Exam passed:</th>
+            <table class="table table-bordered">
+
+                <tr>
+                    <th>    </th>
+                    <th>Name and address of the Institution,Board/University</th>
+                    <th>Max Marks</th>
+                    <th> Marks Secured</th>
+                    <th>% of Marks</th>
+                    <th>Year of Passing</th>
+                </tr>
+                <tr>
+                    <th>S.S.L.C</th>
+                    <td><input type="text" id="sslc"></td>
+                    <td><input type="number" id="maxsslc"></td>
+                    <td><input type="number" id="sslcmark"></td>
+                    <td><input type="number" id="persslc"></td>
+                    <td><input type="number" id="yearsslc"></td>
+                </tr>
+                <tr>
+                    <th>H.Sc</th>
+                    <td><input type="text" id="hsc"></td>
+                    <td><input type="number" id="maxhsc"></td>
+                    <td><input type="number" id="hscmark"></td>
+                    <td><input type="number" id="perhsc"></td>
+                    <td><input type="number" id="yearhsc"></td>
+                </tr>
+                <tr>
+                    <th>UG</th>
+                    <td><input type="text" id="ug"></td>
+                    <td><input type="number" id="maxug"></td>
+                    <td><input type="number" id="ugmark"></td>
+                    <td><input type="number" id="perug"></td>
+                    <td><input type="number" id="yearug"></td>
+                </tr>
+                <tr>
+                    <th>PG</th>
+                    <td><input type="text" id="pg"></td>
+                    <td><input type="number" id="maxpg"></td>
+                    <td><input type="number" id="pgmark"></td>
+                    <td><input type="number" id="perpg"></td>
+                    <td><input type="number" id="yearpg"></td>
+                </tr>
+
+            </table>
+        </tr>
+        <tr>
+            <th>11. Mode of Admission:</th>
+            <td><input type="radio" name="admission_mode" id="counselling" value="counselling"> Counselling</td>
+            <td><input type="radio" name="admission_mode" id="Mgt" value="Mgt"> Mgt</td>
+            <td><input type="radio" name="admission_mode" id="nri" value="nri"> NRI</td>
+            <td><input type="radio" name="admission_mode" id="Others" value="Others"> Others</td>
+        </tr>
+
+    </table>
+    <br>
+    <button type="submit" value="click" onclick="bio()">Submit</button></td>
+</div>
+<div class="container" id="SEM1">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem1pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem1branch"></label>
+            <br>
+            <label>SEMESTER: 1</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem1reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem11"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem11credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem11ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem12"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem12credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem12ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem13"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem13credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem13ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem14"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem14credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem14ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem15"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem15credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem15ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem16"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem16credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem16ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem17"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem17credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem17ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem18"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem18credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem18ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem19"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem19credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem19ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem110"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem110credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem110ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem1att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem1gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem1cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM2">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem2pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem2branch"></label>
+            <br>
+            <label>SEMESTER: 2</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem2reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem21"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem21credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem21ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem22"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem22credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem22ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem23"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem23credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem23ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem24"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem24credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem24ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem25"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem25credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem25ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem26"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem26credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem26ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem27"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem27credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem27ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem28"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem28credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem28ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem29"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem29credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem29ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem210"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem210credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem210ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem2att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem2gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem2cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM3">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem3pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem3branch"></label>
+            <br>
+            <label>SEMESTER: 3</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem3reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem31"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem31credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem31ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem32"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem32credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem32ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem33"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem33credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem33ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem34"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem34credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem34ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem35"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem35credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem35ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem36"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem36credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem36ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem37"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem37credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem37ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem38"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem38credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem38ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem39"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem39credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem39ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem310"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem310credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem310ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem3att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem3gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem3cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM4">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem4pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem4branch"></label>
+            <br>
+            <label>SEMESTER: 4</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem4reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem41"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem41credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem41ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem42"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem42credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem42ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem43"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem43credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem43ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem44"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem44credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem44ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem45"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem45credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem45ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem46"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem46credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem46ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem47"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem47credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem47ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem48"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem48credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem48ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem49"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem49credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem49ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem410"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem410credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem410ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem4att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem4gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem4cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM5">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem5pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem5branch"></label>
+            <br>
+            <label>SEMESTER: 5</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem5reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem51"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem51credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem51ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem52"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem52credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem52ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem53"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem53credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem53ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem54"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem54credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem54ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem55"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem55credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem55ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem56"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem56credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem56ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem57"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem57credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem57ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem58"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem58credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem58ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem59"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem59credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem59ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem510"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem510credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem510ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem5att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem5gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem5cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM6">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem6pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem6branch"></label>
+            <br>
+            <label>SEMESTER: 6</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem6reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem61"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem61credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem61ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem62"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem62credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem62ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem63"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem63credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem63ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem64"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem64credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem64ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem65"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem65credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem65ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem66"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem66credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem66ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem67"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem67credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem67ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem68"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem68credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem68ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem69"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem69credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem69ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem610"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem610credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem610ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem6att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem6gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem6cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM7">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem7pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem7branch"></label>
+            <br>
+            <label>SEMESTER: 7</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem7reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem71"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem71credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem71ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem72"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem72credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem72ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem73"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem73credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem73ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem74"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem74credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem74ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem75"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem75credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem75ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem76"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem76credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem76ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem77"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem77credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem77ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem78"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem78credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem78ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem79"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem79credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem79ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem710"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem710credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem710ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem7att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem7gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem7cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="SEM8">
+    <div class="row">
+        <div class="col-md-8">
+            <label>PROGRAMME: <input type="text" id="sem8pro"></label>
+        </div>
+        <div class="col-md-4">
+            <label>BRANCH: <input type="text" id="sem8branch"></label>
+            <br>
+            <label>SEMESTER: 8</label>
+        </div>
+    </div>
+    <label>Register No:  <input type="text" id="sem8reg"></label>
+    <table class="table table-bordered">
+        <tr>
+            <th rowspan="2">Sl. No.</th>
+            <th rowspan="2">Course Code & Course Name</th>
+            <th rowspan="2">Credit</th>
+            <th rowspan="2">CA Marks (50)</th>
+            <th colspan="4">End Semester Grade</th>
+        </tr>
+        <tr>
+            <th>Dec 20</th>
+            <th>May 20</th>
+            <th>Dec 20</th>
+            <th>May 20</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="sem81"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem81credit"></td>
+            <td><input  style=" width: 100px;"  type="number" id="sem81ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input   type="text" id="sem82"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem82credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem82ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="sem83"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem83credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem83ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="sem84"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem84credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem84ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="sem85"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem85credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem85ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="sem86"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem86credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem86ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="sem87"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem87credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem87ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="sem88"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem88credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem88ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="sem89"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem89credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem89ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="sem810"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem810credit"></td>
+            <td><input  style=" width: 100px;" type="number" id="sem810ca"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+            <td><input  style=" width: 80px;" type="text"></td>
+        </tr>
+
+    </table>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Attendence:<input type="text" id="sem8att">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>GPA: <input type="text" id="sem8gpa">%</label>
+        </div>
+        <div class="col-md-4">
+            <label>CGPA: <input type="text" id="sem8cgpa">%</label>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="pp">
+    <h2 class="text-center">Co-curricular Acitivities</h2>
+   <h3>(A).PAPER PRESENTATION,PROJECT PRESENTATION & QUIZ etc.,</h3> 
+    <table class="table table-bordered">
+        <tr>
+            <th>SI.No</th>
+            <th>Title of the paper presented</th>
+            <th>Name of the institution </th>
+            <th>Prize/Award</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="t1"></td>
+            <td><input type="text" id="n1"></td>
+            <td><input type="text" id="p1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" id="t2"></td>
+            <td><input type="text" id="n2"></td>
+            <td><input type="text" id="p2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="t3"></td>
+            <td><input type="text" id="n3"></td>
+            <td><input type="text" id="p3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="t4"></td>
+            <td><input type="text" id="n4"></td>
+            <td><input type="text" id="p4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="t5"></td>
+            <td><input type="text" id="n5"></td>
+            <td><input type="text" id="p5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="text" id="t6"></td>
+            <td><input type="text" id="n6"></td>
+            <td><input type="text" id="p6"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text" id="t7"></td>
+            <td><input type="text" id="n7"></td>
+            <td><input type="text" id="p7"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><input type="text" id="t8"></td>
+            <td><input type="text" id="n8"></td>
+            <td><input type="text" id="p8"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><input type="text" id="t9"></td>
+            <td><input type="text" id="n9"></td>
+            <td><input type="text" id="p9"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text" id="t10"></td>
+            <td><input type="text" id="n10"></td>
+            <td><input type="text" id="p10"></td>
+        </tr>
+
+    </table>
+</div>
+<div class="container" id="IV">
+    <h2 class="text-center">Co-curricular Acitivities</h2>
+   <h3>(B).INDUSTRIAL VISTS</h3> 
+    <table class="table table-bordered">
+        <tr>
+            <th>SI.No</th>
+            <th>Industry Visited</th>
+            <th>Period and Duration </th>
+            <th>Remarks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="ivt1"></td>
+            <td><input type="date" id="ivn1"></td>
+            <td><input type="text" id="ivp1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" id="ivt2"></td>
+            <td><input type="date" id="ivn2"></td>
+            <td><input type="text" id="ivp2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="ivt3"></td>
+            <td><input type="date" id="ivn3"></td>
+            <td><input type="text" id="ivp3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="ivt4"></td>
+            <td><input type="date" id="ivn4"></td>
+            <td><input type="text" id="ivp4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="ivt5"></td>
+            <td><input type="date" id="ivn5"></td>
+            <td><input type="text" id="ivp5"></td>
+        </tr>
+    </table>
+    <h3>(C).INPLANT TRAINING</h3> 
+    <table class="table table-bordered">
+        <tr>
+            <th>SI.No</th>
+            <th>Place of Training</th>
+            <th>Period and Duration </th>
+            <th>Remarks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="int1"></td>
+            <td><input type="date" id="inn1"></td>
+            <td><input type="text" id="inp1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" id="int2"></td>
+            <td><input type="date" id="inn2"></td>
+            <td><input type="text" id="inp2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="int3"></td>
+            <td><input type="date" id="inn3"></td>
+            <td><input type="text" id="inp3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="int4"></td>
+            <td><input type="date" id="inn4"></td>
+            <td><input type="text" id="inp4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="int5"></td>
+            <td><input type="date" id="inn5"></td>
+            <td><input type="text" id="inp5"></td>
+        </tr>
+    </table>
+</div>
+<div class="container" id="EX">
+<h2 class="text-center">Extra Curricular Activities</h2>
+<h3>SPORTS</h3>
+<textarea id="sp" style="width: 1000px;height: 100px;" ></textarea>
+<h3>NCC/NSS/NSO,etc.:</h3>
+<textarea id="eep" style="width: 1000px;height: 100px;"></textarea>
+<h3>MINI PROJECTS/OPEN HOUSE EXHIBITION MODELS</h3>
+<textarea id="MP" style="width: 1000px;height: 100px;"></textarea>
+<script src="script.js"></script>
+
+</div>
+</body>
+</html>

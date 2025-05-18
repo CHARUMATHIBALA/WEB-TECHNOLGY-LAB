@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator</title>
+    <style>
+        body { 
+        font-family: Arial;
+        text-align: center; 
+        margin: 20px; 
+         }
+        .container { 
+        width: 300px; 
+        margin: auto; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        border-radius: 10px;
+        }
+        input {
+             width: 100%; 
+            margin: 5px 0;
+             padding: 8px; }
+        button { padding: 10px; 
+            margin-top: 10px; 
+            background: #007BFF;
+            color: white;
+            border: none; 
+            border-radius: 5px; }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bill Calculator</h2>
+        <div id="items"></div>
+        <button onclick="addItem()">Add Item</button>
+        <br>
+        <label>
+            Tax (%): <input type="number" id="tax" value="0" min="0">
+        </label>
+        <br>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <h3>Total: <span id="total">0.00</span></h3>
+    </div>
+    
+    <script>
+        function addItem() {
+            let itemsDiv = document.getElementById("items");
+            let input = document.createElement("input");
+            input.type = "number";
+            input.placeholder = "Enter price";
+            itemsDiv.appendChild(input);
+        }
+
+        function calculateTotal() {
+            let inputs = document.querySelectorAll("#items input");
+            let total = 0;
+            inputs.forEach(input => {
+                total += parseFloat(input.value) || 0;
+            });
+            
+            let taxRate = parseFloat(document.getElementById("tax").value) || 0;
+            total += (total * taxRate / 100);
+            
+            document.getElementById("total").innerText = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

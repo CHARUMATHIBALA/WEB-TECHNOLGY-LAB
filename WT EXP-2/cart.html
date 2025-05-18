@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Optional custom styling -->
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .cart-container {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 10px;
+    }
+    .cart-item {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .remove-item, .remove-all {
+      cursor: pointer;
+    }
+    .navbar-custom {
+      background-color: #DE3163;
+    }
+    .navbar-custom a {
+      color: white;
+      font-weight: bold;
+    }
+    .navbar-custom a:hover {
+      color: #ffcc00;
+    }
+    .badge {
+      position: relative;
+      top: -10px;
+      left: -5px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="FIRST.html">PURE GLOW</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="FIRST.html"><i class="fas fa-home"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+                  <li class="nav-item"><a class="nav-link" href="About.html"><i class="fas fa-info-circle"></i> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="cart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span id="cart-count" class="badge bg-danger rounded-circle">0</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div class="container cart-container">
+    <h1>Your Cart</h1>
+    <div id="cart-items" class="mt-4"></div>
+    <div id="cart-total" class="mt-3"></div>
+    <button id="remove-all" class="btn btn-danger mt-3">CLEAR THE CART</button>
+    <a href="payment.html" class="btn btn-primary mt-3">PAYMENT</a>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const cartItemsDiv = document.getElementById('cart-items');
+    const cartTotalDiv = document.getElementById('cart-total');
+    const removeAllButton = document.getElementById('remove-all');
+
+    function updateCartDisplay() {
+      cartItemsDiv.innerHTML = '';
+      if (cart.length > 0) {
+        let totalPrice = 0;
+        cart.forEach((item, index) => {
+          const itemDiv = document.createElement('div');
+          itemDiv.classList.add('cart-item', 'row', 'align-items-center');
+          itemDiv.innerHTML = `
+            <div class="col-md-6"><h5>${item.product}</h5></div>
+            <div class="col-md-2"><p>Price: $${item.price}</p></div>
+            <div class="col-md-2"><p>Quantity: ${item.quantity}</p></div>
+            <div class="col-md-2 text-end">
+              <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>
+            </div>`;
+          cartItemsDiv.appendChild(itemDiv);
+          totalPrice += parseFloat(item.price) * item.quantity;
+        });
+        cartTotalDiv.innerHTML = `<h4>Total: $${totalPrice.toFixed(2)}</h4>`;
+      } else {
+        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        cartTotalDiv.innerHTML = '';
+      }
+      updateCartCount();
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartDisplay();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartDisplay();
+    }
+
+    function attachRemoveEventListeners() {
+      document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function() {
+          removeFromCart(this.getAttribute('data-index'));
+        });
+      });
+    }
+
+    function updateCartCount() {
+      const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+      const cartCountElement = document.getElementById('cart-count');
+      if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+      }
+    }
+
+    removeAllButton.addEventListener('click', clearCart);
+
+    window.onload = function() {
+      updateCartDisplay();
+      attachRemoveEventListeners();
+    };
+  </script>
+</body>
+</html>

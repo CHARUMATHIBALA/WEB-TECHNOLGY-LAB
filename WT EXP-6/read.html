@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Read Data</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Read User Data</h2>
+    <input type="text" id="roll_no" placeholder="Enter Roll Number" />
+    <button onclick="fetchData()">Get Data</button>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    async function fetchData() {
+      const rollNo = document.getElementById('roll_no').value;
+      const res = await fetch(`http://localhost:5000/user/${rollNo}`);
+      const data = await res.json();
+      const output = document.getElementById('output');
+      if (data.success) {
+        output.innerText = JSON.stringify(data.user, null, 2);
+      } else {
+        output.innerText = data.message;
+      }
+    }
+  </script>
+</body>
+</html>
