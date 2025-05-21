@@ -1,0 +1,9 @@
+<h1>View Your Bio</h1>
+<label for="studentID">ENTER UR MOBILE NUMBER:</label>
+<input [(ngModel)]="studentID" placeholder="ENTER UR MOBILE NUMBER:" />
+<button (click)="fetchComplaints()">View Bio</button>
+<div *ngFor="let c of complaints">
+  <p><strong>About client:</strong> {{ c.complaint }}</p>
+  <p><strong>Status:</strong> {{ c.status }}</p>
+  <hr />
+</div>

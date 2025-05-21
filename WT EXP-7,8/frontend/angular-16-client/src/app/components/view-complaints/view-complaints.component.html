@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>BRIDE & GROOM DATA</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Heartconnect ID</th>
+        <th>Place</th>
+        <th>Bio</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of complaints">
+        <td>{{ c.name }}</td>
+        <td>{{ c.studentID }}</td>
+        <td>{{ c.department }}</td>
+        <td>{{ c.complaint }}</td>
+        <td>{{ c.status }}</td>
+        <td>
+          <button (click)="resolveComplaint(c._id)">VERIFICATION COMPLETED</button>
+          <button (click)="deleteComplaint(c._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

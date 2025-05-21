@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Register</h2>
+  <input [(ngModel)]="name" placeholder="YOUR SWEET NAME PLEASE" />
+  <input [(ngModel)]="studentID" placeholder="YOUR CONTACT NUMBER" />
+  <input [(ngModel)]="department" placeholder="Place" />
+  <textarea [(ngModel)]="complaint" placeholder="About Yourself" rows="4"></textarea>
+  <p class="error" *ngIf="errorMessage">All fields are required</p>
+  <button class="btn" (click)="submitComplaint()">Submit </button>
+</div>

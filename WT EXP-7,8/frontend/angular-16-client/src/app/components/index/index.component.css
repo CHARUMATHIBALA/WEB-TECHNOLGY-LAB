@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Container Styling */
+.container {
+  margin-top: 60px;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+p {
+  color: #6c757d;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Button Styling */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-register {
+  background-color: #28a745;
+}
+
+.btn-register:hover {
+  background-color: #218838;
+}
+
+.btn-login {
+  background-color: #007bff;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.btn-view-complaints {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-view-complaints:hover {
+  background-color: #e0a800;
+}

@@ -1,0 +1,20 @@
+/* Global styles for the navbar */
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styling for active navigation links */
+.nav-link.active {
+  font-weight: bold;
+  color: #ffffff !important;
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
